@@ -1,0 +1,27 @@
+body {
+    background-color: #f0f0f0; 
+}
+
+.boton-login-btn {
+    background-color: #f81313;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.boton-login-btn:hover {
+    background-color: #2779bd;
+}
+
+.nuevo-label {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #3490dc;
+}
+
+.anuncios {
+    font-weight: 600; 
+    font-size: 0.875rem;
+    color: #263ba7;
+}
