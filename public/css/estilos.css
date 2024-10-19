@@ -2,16 +2,16 @@ body {
     background-color: #f0f0f0; 
 }
 
-.boton-login-btn {
-    background-color: #ef4406;
+.boton-btn {
+    background-color: #053af8;
     color: white;
     padding: 10px 10px;
     border-radius: 5px;
     font-weight: bold;
 }
 
-.boton-login-btn:hover {
-    background-color: #2779bd;
+.boton2-btn:hover {
+    background-color: #ff0505;
 }
 
 .nuevo-label {
@@ -24,4 +24,39 @@ body {
     font-weight: 600; 
     font-size: 0.875rem;
     color: #263ba7;
+}
+
+.tabla-per{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.tabla-per th, .tabla-per td{
+    border: 1px solid #0040ff;
+    padding: 10px;
+    text-align: left;
+    margin: 30px;
+}
+
+.tabla-per th{
+    background-color: aqua;
+}
+
+.boton-crud{
+    background-color: #057af8;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.boton-borrar{
+    background-color: #910f0f;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px;
 }

@@ -16,6 +16,7 @@
 
         <!-- Styles -->
         @livewireStyles
+        <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
     </head>
     <body class="font-sans antialiased">
         <x-banner />
@@ -32,13 +33,14 @@
                 </header>
             @endif
 
-            <!-- Page Content -->
+            <!-- Page Content-->
             <main>
                 {{ $slot }}
             </main>
         </div>
 
         @stack('modals')
+        
 
         @livewireScripts
     </body>
