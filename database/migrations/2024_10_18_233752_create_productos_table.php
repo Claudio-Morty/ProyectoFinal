@@ -18,6 +18,7 @@ return new class extends Migration
             $table->decimal('precio_publico', 8, 2);
             $table->integer('stock');
             $table->string('imagen');
+            $table->foreignId('categoria_id')->nullable()->constrained('categorias')->onDelete('set null');
             $table->timestamps();
         });
     }
@@ -27,6 +28,12 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::table('productos', function (Blueprint $table) {
+            $table->dropForeign(['categoria_id']); 
+            $table->dropColumn('categoria_id');
+        });
+    
         Schema::dropIfExists('productos');
     }
+    
 };

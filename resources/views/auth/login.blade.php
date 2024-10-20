@@ -8,7 +8,7 @@
             </div>
         @endsession
         <div class="anuncios">
-        Bienvenido a nuestra aplicación, por favor inicia sesión.
+        Bienvenido por favor inicia sesión.
         </div>
         <form method="POST" action="{{ route('login') }}">
             @csrf

@@ -51,7 +51,24 @@
                 @enderror
             </div>
 
+            <div class="mb-4">
+                <label for="categoria_id" class="block text-sm font-medium text-gray-700">Categoría</label>
+                <select name="categoria_id" id="categoria_id" class="border mt-1 block w-full rounded-md shadow-sm">
+                    <option value="">Seleccione una categoría</option>
+                    @foreach($categorias as $categoria)
+                        <option value="{{ $categoria->id }}" {{ old('categoria_id') == $categoria->id ? 'selected' : '' }}>
+                            {{ $categoria->nombre }}
+                        </option>
+                    @endforeach
+                </select>
+                @error('categoria_id')
+                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                @enderror
+            </div>
+
             <button type="submit" class="bg-blue-500 text-white mt-4 px-4 py-2 rounded-md">Guardar Producto</button>
         </form>
     </div>
 </x-app-layout>
+
+

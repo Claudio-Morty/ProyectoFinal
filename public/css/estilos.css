@@ -1,7 +1,3 @@
-body {
-    background-color: #f0f0f0; 
-}
-
 .boton-btn {
     background-color: #053af8;
     color: white;
@@ -21,8 +17,8 @@ body {
 }
 
 .anuncios {
-    font-weight: 600; 
-    font-size: 0.875rem;
+    font-weight: 100; 
+    font-size: 100%;
     color: #263ba7;
 }
 

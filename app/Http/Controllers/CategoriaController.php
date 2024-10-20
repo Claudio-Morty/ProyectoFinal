@@ -11,13 +11,13 @@ class CategoriaController extends Controller
     
     public function index()
     {
-        $categorias = Categoria::all();
-        return view('categorias.listacategorias', compact('categorias'));
+        $categorias = Categoria::all(); 
+        return view('categorias.listacategorias', compact('categorias')); 
     }
 
-    public function create()
+        public function create()
     {
-        return view('categorias.agregarcategoria');
+        return view('categorias.agregarcategoria'); 
     }
 
 
@@ -78,5 +78,11 @@ class CategoriaController extends Controller
     {
         $categoria->delete();
         return redirect()->route('categorias.index')->with('success', 'Categoria eliminado correctamente.');
+    }
+
+    public function show(Categoria $categoria)
+    {
+        $productos = $categoria->productos; 
+        return view('productos.listaproductos', compact('categoria', 'productos')); 
     }
 }
