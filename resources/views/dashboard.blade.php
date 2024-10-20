@@ -14,6 +14,11 @@
                         <p class="text-gray-600">Gestión de productos</p>
                         <a href="{{ route('productos.index') }}" class="text-blue-500 hover:underline mt-2 inline-block">Ver productos</a>
                     </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-bold text-gray-800">Categorías</h2>
+                        <p class="text-gray-600">Gestión de categorías</p>
+                        <a href="{{ route('categorias.index') }}" class="text-blue-500 hover:underline mt-2 inline-block">Ver categorías</a>
+                    </div>
                 </div>
             </div>
         </div>
