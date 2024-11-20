@@ -1,11 +1,9 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
 html, body {
     width: 100%;
     height: 100%;
@@ -34,7 +32,6 @@ body {
     }
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -59,7 +56,6 @@ header nav a:hover {
     background: rgba(255, 255, 255, 0.4);
 }
 
-/* Main Content */
 .main-content {
     text-align: center;
     margin-top: 5%;
@@ -76,13 +72,12 @@ header nav a:hover {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Features Section */
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     padding: 2rem;
-    margin-top: 3rem; /* Reduced space between main content and features */
+    margin-top: 3rem; 
     z-index: 1;
 }
 
@@ -106,7 +101,6 @@ header nav a:hover {
     line-height: 1.5;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 1rem;

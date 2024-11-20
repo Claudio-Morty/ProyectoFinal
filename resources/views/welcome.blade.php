@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario Virtual</title>
 
-    <!-- Link to CSS -->
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="icon" href="{{ asset('images/logo2.jpg') }}" type="image/jpg">
+
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div>Inventario Virtual</div>
         <nav>
@@ -26,13 +26,11 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="main-content">
         <h1>Bienvenido a Inventario Virtual</h1>
         <p>Gestiona tus productos, controla tus ventas y organiza tu inventario con facilidad.</p>
     </main>
 
-    <!-- Features Section -->
     <section class="features">
         <div class="feature-card">
             <h3>Gestión de Productos</h3>
@@ -48,7 +46,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         © 2024 Inventario Virtual. Todos los derechos reservados.
     </footer>
