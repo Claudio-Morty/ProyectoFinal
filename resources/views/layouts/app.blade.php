@@ -22,6 +22,7 @@
         <!-- Styles -->
         @livewireStyles
         <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         
     </head>
     <body class="font-sans antialiased">

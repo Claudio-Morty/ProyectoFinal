@@ -11,7 +11,7 @@ html, body {
 
 body {
     font-family: 'Arial', sans-serif;
-    color: #ffffff;
+    color: #000000;
     background: linear-gradient(45deg, #010384, #054389, #1166b1, #1682db, #328cd5);
     background-size: 400% 400%;
     animation: gradientShift 6s ease infinite;
@@ -107,4 +107,63 @@ footer {
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
     margin-top: auto;
+}
+
+.boton-borrar{
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.boton-crud{
+    background-color: #057af8;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.tabla-per th{
+    background-color: aqua;
+}
+
+.tabla-per th, .tabla-per td{
+    border: 1px solid #0040ff;
+    padding: 10px;
+    text-align: left;
+    margin: 30px;
+}
+
+.tabla-per{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.anuncios {
+    font-weight: 100; 
+    font-size: 100%;
+    color: #263ba7;
+}
+
+.nuevo-label {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #3490dc;
+}
+
+.boton-btn {
+    background-color: #0037ff;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.boton2-btn:hover {
+    background-color: #ffffff;
 }
