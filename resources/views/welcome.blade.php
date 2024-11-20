@@ -6,7 +6,6 @@
     <title>Inventario Virtual</title>
 
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <link rel="icon" href="{{ asset('images/logo2.jpg') }}" type="image/jpg">
 
 </head>
 <body>
