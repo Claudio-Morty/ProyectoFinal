@@ -1,16 +1,14 @@
 <x-app-layout>
-    @section('content')
-        <x-slot name="header">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Agregar Categorias') }}
-            </h2>
-        </x-slot>
+    <x-slot name="header">
+        <h2 class="dashboard-title-categ">
+            {{ __('Agregar Categorias') }}
+        </h2>
+    </x-slot>
 
-        <div class="container mx-auto">
-            <h1 class="text-2xl font-bold mb-4">Añadir Categoria</h1>
-            
-            <form action="{{ route('categorias.store') }}" method="POST" enctype="multipart/form-data">
-                @csrf
+    <div class="container mx-auto">
+        
+        <form action="{{ route('categorias.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
 
                 <div class="mb-4">
                     <label for="nombre" class="anuncios">Nombre de la Categoria</label>

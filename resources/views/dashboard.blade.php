@@ -1,32 +1,22 @@
-
 <x-app-layout>
-    @section('content')
-        <x-slot name="header">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Pagina principal') }}
-            </h2>
-        </x-slot>
+    <x-slot name="header">
+        <h2 class="dashboard-title">
+            {{ __('Página Principal') }}
+        </h2>
+    </x-slot>
 
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h2 class="text-xl font-bold text-gray-800">Productos</h2>
-                            <p class="text-gray-600">Gestión de productos</p>
-                            <a href="{{ route('productos.index') }}" class="text-blue-500 hover:underline mt-2 inline-block">Ver productos</a>
-                        </div>
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h2 class="text-xl font-bold text-gray-800">Categorías</h2>
-                            <p class="text-gray-600">Gestión de categorías</p>
-                            <a href="{{ route('categorias.index') }}" class="text-blue-500 hover:underline mt-2 inline-block">Ver categorías</a>
-                        </div>
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <h2 class="text-xl font-bold text-gray-800">Uusarios</h2>
-                            <p class="text-gray-600">Gestión de usuarios</p>
-                            <a href="{{ route('usuarios.index') }}" class="text-blue-500 hover:underline mt-2 inline-block">Ver usuarios</a>
-                        </div>
-                    </div>
+    <div class="py-12 dashboard-container">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h2>Productos</h2>
+                    <p>Gestión de productos</p>
+                    <a href="{{ route('productos.index') }}" class="btn-dashboard">Ver productos</a>
+                </div>
+                <div class="dashboard-card">
+                    <h2>Categorías</h2>
+                    <p>Gestión de categorías</p>
+                    <a href="{{ route('categorias.index') }}" class="btn-dashboard">Ver categorías</a>
                 </div>
             </div>
         </div>
