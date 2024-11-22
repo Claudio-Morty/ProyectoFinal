@@ -1,15 +1,12 @@
 <x-app-layout>
-    @section('content')
-        <x-slot name="header">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Categorías') }}
-            </h2>
-        </x-slot>
+    <x-slot name="header">
+        <h2 class="dashboard-title-categ">
+            {{ __('Categorías') }}
+        </h2>
+    </x-slot>
 
-        <div class="container mx-auto">
-            <h1 class="text-2xl font-bold mb-4">Categorías</h1>
-            
-            <a href="{{ route('categorias.create') }}" class="boton-crud">Añadir Categoría</a>
+    <div class="container mx-auto">        
+        <a href="{{ route('categorias.create') }}" class="boton-crud-categ">Añadir Categoría</a>
 
             <table class="tabla-per">
                 <thead>

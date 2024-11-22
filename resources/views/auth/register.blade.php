@@ -5,7 +5,7 @@
         </x-slot>
 
         <x-validation-errors class="mb-4" />
-
+    <div class="register-container">
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
@@ -64,5 +64,6 @@
                 </x-button>
             </div>
         </form>
+    </div>
     </x-authentication-card>
 </x-guest-layout>

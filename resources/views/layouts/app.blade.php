@@ -21,7 +21,8 @@
 
         <!-- Styles -->
         @livewireStyles
-        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/mi-estilo.css') }}?v={{ time() }}">
+
         
     </head>
     <body class="font-sans antialiased">

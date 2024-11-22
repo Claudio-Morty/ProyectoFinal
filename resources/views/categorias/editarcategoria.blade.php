@@ -1,17 +1,15 @@
 <x-app-layout>
-    @section('content')
-        <x-slot name="header">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Editar Categoria') }}
-            </h2>
-        </x-slot>
+    <x-slot name="header">
+        <h2 class="dashboard-title-categ">
+            {{ __('Editar Categoria') }}
+        </h2>
+    </x-slot>
 
-        <div class="container mx-auto">
-            <h1 class="text-2xl font-bold mb-4">Editar Categoria</h1>
-            
-            <form action="{{ route('categorias.update', $categoria->id) }}" method="POST" enctype="multipart/form-data">
-                @csrf
-                @method('PUT')
+    <div class="container mx-auto">
+        
+        <form action="{{ route('categorias.update', $categoria->id) }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
 
                 <div class="mb-4">
                     <label for="nombre" class="anuncios">Nombre de la Categoria</label>
