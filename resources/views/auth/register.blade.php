@@ -20,10 +20,10 @@
             </div>
 
             <div class="mt-4">
-                <x-label for="rol" value="{{ __('Rol') }}" />
-                <select name="rol" id="rol" class="block mt-1 w-full" required>
-                <option value="Empleado" {{ old('rol') == 'Empleado' ? 'selected' : '' }}>Empleado</option>
-                <option value="Gerente" {{ old('rol') == 'Gerente' ? 'selected' : '' }}>Gerente</option>
+                <x-label for="rol" :value="__('Rol')" />
+                <select id="rol" name="rol" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                <option value="empleado">Empleado</option>
+                <option value="gerente">Gerente</option>
                 </select>
             </div>
 

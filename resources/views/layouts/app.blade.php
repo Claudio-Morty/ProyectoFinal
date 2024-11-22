@@ -21,7 +21,6 @@
 
         <!-- Styles -->
         @livewireStyles
-        <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         
     </head>
@@ -39,10 +38,8 @@
                     </div>
                 </header>
             @endif
-
-            <!-- Page Content-->
             <main>
-                {{ $slot }}
+                @yield('content')
             </main>
         </div>
 

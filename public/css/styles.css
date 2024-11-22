@@ -17,7 +17,7 @@ body {
     animation: gradientShift 6s ease infinite;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: auto;
 }
 
 @keyframes gradientShift {
@@ -110,7 +110,7 @@ footer {
 }
 
 .boton-borrar{
-    background-color: #ff0000;
+    background-color: #e6512b;
     color: rgb(255, 255, 255);
     padding: 10px 10px;
     border-radius: 5px;
@@ -167,3 +167,4 @@ footer {
 .boton2-btn:hover {
     background-color: #ffffff;
 }
+

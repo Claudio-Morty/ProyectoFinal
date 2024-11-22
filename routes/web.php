@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\UserController;
 
 
 Route::resource('productos', ProductoController::class)->middleware('auth');
@@ -11,7 +12,7 @@ Route::resource('productos', ProductoController::class)->middleware('auth');
 Route::resource('categorias', CategoriaController::class)->middleware('auth');
 Route::get('/categorias', [CategoriaController::class, 'index'])->name('categorias.index');
 
-
+Route::resource('usuarios', UserController::class);
 
 Route::get('/', function () {
     return view('welcome');
