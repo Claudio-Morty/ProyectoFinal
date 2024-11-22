@@ -13,6 +13,7 @@ Route::resource('categorias', CategoriaController::class)->middleware('auth');
 Route::get('/categorias', [CategoriaController::class, 'index'])->name('categorias.index');
 
 Route::resource('usuarios', UserController::class);
+Route::put('/usuarios/{usuario}', [UserController::class, 'update'])->name('usuarios.update');
 
 Route::get('/', function () {
     return view('welcome');
