@@ -1,12 +1,11 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="dashboard-title-prod">
             {{ __('Agregar Productos') }}
         </h2>
     </x-slot>
 
     <div class="container mx-auto">
-        <h1 class="text-2xl font-bold mb-4">Añadir Producto</h1>
         
         <form action="{{ route('productos.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
