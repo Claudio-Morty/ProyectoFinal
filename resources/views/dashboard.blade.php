@@ -25,6 +25,11 @@
                             <p class="text-gray-600">Gestión de Usuarios</p>
                             <a href="{{ route('users.index') }}" class="text-blue-500 hover:underline mt-2 inline-block">Ver Usuarios</a>
                         </div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <h2 class="text-xl font-bold text-gray-800">Salidas</h2>
+                            <p class="text-gray-600">Gestión de Salidas</p>
+                            <a href="{{ route('salidas.index') }}" class="text-blue-500 hover:underline mt-2 inline-block">Ver Salidas</a>
+                        </div>
                     </div>
                 </div>
             </div>
