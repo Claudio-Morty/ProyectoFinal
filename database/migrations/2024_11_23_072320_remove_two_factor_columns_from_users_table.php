@@ -12,7 +12,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['two_factor_secret', 'two_factor_recovery_codes', 'two_factor_confirmed_at']);
+            $table->dropColumn(['two_factor_secret', 'two_factor_recovery_codes']);
         });
     }
     
@@ -26,7 +26,6 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('two_factor_secret')->nullable();
             $table->text('two_factor_recovery_codes')->nullable();
-            $table->timestamp('two_factor_confirmed_at')->nullable();
         });
     }
 };
