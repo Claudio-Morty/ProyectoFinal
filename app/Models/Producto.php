@@ -22,5 +22,17 @@ class Producto extends Model
         'categoria_id', 
     ];
 
+        protected static function booted()
+    {
+        static::deleting(function ($producto) {
+            $producto->salidas()->delete();
+        });
+    }
+
+    public function salidas()
+    {
+        return $this->hasMany(Salida::class);
+    }
+
 
 }
