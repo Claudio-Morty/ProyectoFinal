@@ -11,18 +11,23 @@ class UserPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->rol === 'Gerente'; 
+        return strtolower($user->rol) === 'gerente'; 
     }
 
-
+    /**
+     * Determine si el usuario puede actualizar a otro usuario.
+     */
     public function update(User $user, User $model)
     {
-        return $user->rol === 'Gerente'; 
+        return strtolower($user->rol) === 'gerente'; 
     }
 
-
+    /**
+     * Determine si el usuario puede eliminar a otro usuario.
+     */
     public function delete(User $user, User $model)
     {
-        return $user->rol === 'Gerente'; 
+        return strtolower($user->rol) === 'gerente'; 
     }
 }
+
