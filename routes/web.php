@@ -23,7 +23,8 @@ Route::post('/salidas', [SalidaController::class, 'store'])->name('salidas.store
 Route::get('/salidas', [SalidaController::class, 'index'])->name('salidas.index');
 Route::get('salidas/{id}/edit', [SalidaController::class, 'edit'])->name('salida.edit');
 Route::delete('salidas/{id}', [SalidaController::class, 'destroy'])->name('salida.destroy');
-
+Route::put('/salidas/{salida}', [UserController::class, 'update'])->name('salida.update');
+Route::resource('salidas', SalidaController::class);
 
 Route::get('/', function () {
     return view('welcome');

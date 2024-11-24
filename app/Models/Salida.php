@@ -14,7 +14,6 @@ class Salida extends Model
         'fecha',
         'cantidad',
         'motivo',
-        'estado',
     ];
 
     public function producto()

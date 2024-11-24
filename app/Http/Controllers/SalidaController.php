@@ -27,13 +27,13 @@ class SalidaController extends Controller
     {
         $salida = Salida::findOrFail($id); 
         $productos = Producto::all();
-        return view('salidas.editarsalida', compact('salida'));
+        return view('salidas.editarsalida', compact('salida', 'productos'));
     }
 
     public function update(Request $request, $id)
     {
         $salida = Salida::findOrFail($id); 
-        $producto = $salida->producto;
+        $productoAnterior = Producto::findOrFail($salida->producto_id);
     
         $request->validate([
             'producto_id' => 'required|exists:productos,id',
@@ -42,23 +42,31 @@ class SalidaController extends Controller
             'fecha' => 'required|date',
         ]);
     
-        $producto->stock += $salida->cantidad;
+        $productoAnterior->stock += $salida->cantidad;
+        $productoAnterior->save();
     
-        $producto->stock -= $request->cantidad;
+        if ($request->producto_id != $salida->producto_id) {
+            $productoNuevo = Producto::findOrFail($request->producto_id);
+            $salida->producto_id = $request->producto_id;
+        } else {
+            $productoNuevo = $productoAnterior; 
+        }
     
-        $salida->producto_id = $request->producto_id;
+        if ($productoNuevo->stock < $request->cantidad) {
+            return back()->withErrors(['cantidad' => 'No hay suficiente stock disponible en el producto seleccionado.']);
+        }
+    
+        $productoNuevo->stock -= $request->cantidad;
+        $productoNuevo->save();
+    
         $salida->cantidad = $request->cantidad;
         $salida->motivo = $request->motivo;
         $salida->fecha = $request->fecha;
-    
-        $producto->save();
-    
         $salida->save();
     
         return redirect()->route('salidas.index')->with('success', 'Salida actualizada correctamente.');
     }
     
-
 
     public function store(Request $request)
     {

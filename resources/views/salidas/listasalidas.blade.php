@@ -3,6 +3,7 @@
 @section('content')
     <div class="container">
         <h2>Lista de Salidas</h2>
+        <a href="{{ route('salidas.create') }}" class="boton-crud">Añadir Salida</a>
 
         @if(session('success'))
             <div class="alert alert-success">
