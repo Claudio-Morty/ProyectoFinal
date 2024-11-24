@@ -23,6 +23,7 @@
                         <div class="dashboard-card">
                             <h2>Usuarios</h2>
                             <p>Gestión de Usuarios</p>
+                            <p>(Solo Gerentes)</p>
                             <a href="{{ route('users.index') }}" class="btn-dashboard">Ver Usuarios</a>
                         </div>
                         <div class="dashboard-card">
