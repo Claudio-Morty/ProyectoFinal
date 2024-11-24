@@ -73,7 +73,7 @@ class SalidaController extends Controller
         $salida->fecha = $request->fecha;
         $salida->save();
     
-        return redirect()->route('salidas.index')->with('success', 'Salida actualizada correctamente.');
+        return redirect()->route('salidas.index');
     }
     
 
@@ -102,7 +102,7 @@ class SalidaController extends Controller
         $producto->stock -= $request->stock;
         $producto->save();
 
-        return redirect()->route('salidas.index')->with('success', 'Salida registrada correctamente y stock actualizado.');
+        return redirect()->route('salidas.index');
     }
 
         public function destroy($id)
@@ -116,7 +116,7 @@ class SalidaController extends Controller
 
         $producto->save();
 
-        return redirect()->route('salidas.index')->with('success', 'Salida eliminada correctamente y stock recuperado.');
+        return redirect()->route('salidas.index');
     }
 
 }
