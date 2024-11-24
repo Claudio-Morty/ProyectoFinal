@@ -2,7 +2,8 @@
 
 @section('content')
 <div class="container">
-    <h1>Lista de Usuarios</h1>
+    <h2 class="dashboard-title-prod">Lista de Usuarios</h2>
+
 
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Producto;
 use App\Models\Salida;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
+
 
 class SalidaController extends Controller
 {
@@ -14,6 +16,14 @@ class SalidaController extends Controller
 
         return view('salidas.listasalidas', compact('salidas'));
     }
+
+    public function pdf()
+    {
+        $salidas = Salida::all(); 
+        $pdf = pdf::loadView('categorias.pdf', compact('salidas'));
+        return $pdf->stream();
+    }   
+
 
     public function create()
     {

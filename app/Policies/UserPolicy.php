@@ -11,18 +11,18 @@ class UserPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->rol === 'gerente'; 
+        return $user->rol === 'Gerente'; 
     }
 
 
     public function update(User $user, User $model)
     {
-        return $user->rol === 'gerente'; 
+        return $user->rol === 'Gerente'; 
     }
 
 
     public function delete(User $user, User $model)
     {
-        return $user->rol === 'gerente'; 
+        return $user->rol === 'Gerente'; 
     }
 }

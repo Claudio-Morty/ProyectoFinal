@@ -5,7 +5,7 @@
         </x-slot>
 
         <x-validation-errors class="mb-4" />
-
+    <div class="register-container">
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
@@ -20,10 +20,10 @@
             </div>
 
             <div class="mt-4">
-                <x-label for="rol" value="{{ __('Rol') }}" />
-                <select name="rol" id="rol" class="block mt-1 w-full" required>
-                    <option value="empleado">Empleado</option>
-                    <option value="gerente">Gerente</option>
+                <x-label for="rol" :value="__('Rol')" />
+                <select id="rol" name="rol" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                <option value="empleado">Empleado</option>
+                <option value="gerente">Gerente</option>
                 </select>
             </div>
 
@@ -64,5 +64,6 @@
                 </x-button>
             </div>
         </form>
+    </div>
     </x-authentication-card>
 </x-guest-layout>

@@ -6,6 +6,8 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SalidaController;
 
+Route::get('salidas/pdf', [SalidaController::class, 'pdf'])->name('salidas.pdf');
+
 
 Route::resource('productos', ProductoController::class)->middleware('auth');
 
@@ -25,6 +27,8 @@ Route::get('salidas/{id}/edit', [SalidaController::class, 'edit'])->name('salida
 Route::delete('salidas/{id}', [SalidaController::class, 'destroy'])->name('salida.destroy');
 Route::put('/salidas/{salida}', [UserController::class, 'update'])->name('salida.update');
 Route::resource('salidas', SalidaController::class);
+
+
 
 Route::get('/', function () {
     return view('welcome');

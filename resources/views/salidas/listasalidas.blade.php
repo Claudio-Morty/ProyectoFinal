@@ -2,8 +2,14 @@
 
 @section('content')
     <div class="container">
-        <h2>Lista de Salidas</h2>
-        <a href="{{ route('salidas.create') }}" class="boton-crud">Añadir Salida</a>
+        <h2 class="dashboard-title-prod">Lista de Salidas</h2>
+
+        <div>
+            <a href="{{ route('salidas.create') }}" class="boton-crud" style="margin-left: 170px;">Añadir Salida</a>
+            <a href="{{ route('salidas.pdf') }}" class="boton-crud" target="_blank" style="margin-left: 15px;">Generar PDF</a>
+        </div>
+
+
 
         @if(session('success'))
             <div class="alert alert-success">
@@ -29,12 +35,13 @@
                         <td>{{ $salida->motivo }}</td>
                         <td>{{ $salida->fecha }}</td>
                         <td>
-                            <a href="{{ route('salida.edit', $salida->id) }}" class="btn btn-warning">Editar</a>
-                            <form action="{{ route('salida.destroy', $salida->id) }}" method="POST" style="display:inline;">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Eliminar</button>
-                            </form>
+                        <a href="{{ route('salida.edit', $salida->id) }}" class="boton-crud">Editar</a>
+                        <form action="{{ route('salida.destroy', $salida->id) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="boton-borrar">Eliminar</button>
+                        </form>
+
                         </td>
                     </tr>
                 @endforeach

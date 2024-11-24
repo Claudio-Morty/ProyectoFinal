@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Categoria;
 use Illuminate\Support\Facades\Storage;
 
+
 class CategoriaController extends Controller
 {
     
@@ -19,7 +20,6 @@ class CategoriaController extends Controller
     {
         return view('categorias.agregarcategoria'); 
     }
-
 
     public function store(Request $request)
     {

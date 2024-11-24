@@ -1,26 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h1>Editar Usuario</h1>
+<div class="container-edit">
+    <h2 class="dashboard-title-prod">Editar Usuario</h2>
 
     <form action="{{ route('users.update', $user) }}" method="POST">
         @csrf
         @method('PUT')
 
-        <div class="mb-3">
-            <label for="name" class="anuncios">Nombre</label>
-            <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}">
+        <div class="form-group">
+            <label for="name" class="nuevo-label">Nombre</label>
+            <input type="text" id="name" name="name" class="form-control" value="{{ $user->name }}">
         </div>
 
-        <div class="mb-3">
-            <label for="email" class="anuncios">Email</label>
-            <input type="email" class="form-control" id="email" name="email" value="{{ $user->email }}">
+        <div class="form-group">
+            <label for="email" class="nuevo-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" value="{{ $user->email }}">
         </div>
 
-        <div class="mb-3">
-            <label for="rol" class="anuncios">Rol</label>
-            <select class="form-control" id="rol" name="rol">
+        <div class="form-group">
+            <label for="rol" class="nuevo-label">Rol</label>
+            <select id="rol" name="rol" class="form-control">
                 <option value="empleado" {{ $user->rol === 'empleado' ? 'selected' : '' }}>Empleado</option>
                 <option value="gerente" {{ $user->rol === 'gerente' ? 'selected' : '' }}>Gerente</option>
             </select>
