@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Producto;
 use App\Models\Salida;
 use Illuminate\Http\Request;
-use Barryvdh\DomPDF\Facade as PDF;
 
 class SalidaController extends Controller
 {
