@@ -77,7 +77,6 @@ El objetivo principal de esta página es facilitar la administración del invent
 Está pensado para adaptarse a las necesidades reales de cualquier empresa. Es amigable con el usuario, accesible desde cualquier dispositivo y ofrece herramientas que realmente hacen la diferencia.
 
 ## POSIBLE REQUERIMIENTO
-Requiere tener instalado en su equipo la librería DOMPDF:
-composer require barryvdh/laravel-dompdf
+Requiere tener instalado en su equipo la librería DOMPDF:                        composer require barryvdh/laravel-dompdf
 
 
