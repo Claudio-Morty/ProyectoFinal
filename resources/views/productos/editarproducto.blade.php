@@ -81,7 +81,7 @@
                     <label for="imagen">Nueva Imagen (opcional)</label>
                     <input type="file" name="imagen" id="imagen" 
                         class="form-control @error('imagen') error-border @enderror" 
-                        accept="image/*">
+                        required accept="image/*">
                     @error('imagen')
                         <span class="error">{{ $message }}</span>
                     @enderror
